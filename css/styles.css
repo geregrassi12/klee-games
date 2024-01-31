@@ -1,15 +1,207 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 
+:root {
+    --clr-main: #0F1026;
+    --clr-main-light: rgb(116, 122, 219);
+    --clr-btn: #667BF2;
+    --clr-white: white;
+    --clr-black: black;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+ul {
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+li {
+    margin: 0 10px;
+}
+
+a {
+    color: var(--clr-black);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/*                                      HEADER                                                            */
+
+.nav-link {
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    font-family: montserrat, sans-serif;
+}
+
+.nav-link img {
+    width: 200px;
+    /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    margin-left: 25rem;
+    margin-right: 25rem;
+}
+
+.header_container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+/*                                      HERO                                                            */
+.hero {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+}
+
+/* Estilo para el fondo circular del botón de siguiente */
+.carousel-control-next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 60px;
+    /* Ajusta el tamaño del círculo según tus necesidades */
+    background-color: rgba(169, 169, 169, 0.5);
+    /* Gris con opacidad al 50% */
+    border-radius: 50%;
+    /* Hace que el fondo tenga forma de círculo */
+}
+/* Muestra el fondo cuando se coloca el ratón sobre el botón de siguiente */
+.carousel-control-next:hover::after {
+    display: block;
+}
+
+/* Estilo para el fondo circular del botón de siguiente */
+.carousel-control-prev::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 60px;
+    /* Ajusta el tamaño del círculo según tus necesidades */
+    background-color: rgba(169, 169, 169, 0.5);
+    /* Gris con opacidad al 50% */
+    border-radius: 50%;
+    /* Hace que el fondo tenga forma de círculo */
+}
+/* Muestra el fondo cuando se coloca el ratón sobre el botón de siguiente */
+.carousel-control-prev:hover::after {
+    display: block;
+}
+.eslogan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      color: #000; /* Color del texto */
+      font-size: 24px; /* Tamaño del texto */
+      margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    }
+.carousel-item-links {
+    position: absolute;
+    top: 75%; /* Ajusta la posición vertical de los enlaces según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Ajusta el espacio entre los enlaces según tus necesidades */
+    justify-content: center; /* Alinea los enlaces al centro */
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    z-index: 10;
+}
 /*                                      GAMES                                                            */
-.games h2{
+.games h2 {
     font-family: 'Bungee Spice', sans-serif;
 }
+
+.games_list {
+    margin: 10rem;
+}
+
+.game_section {
+    display: flex;
+    width: 1000px;
+    height: auto;
+}
+
+.featured_games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image_featured_game {
+    width: 450px;
+    height: auto;
+    display: block;
+}
+
+.featured_games_details {
+    display: grid;
+    grid-template-columns: repeat(0, 4, 1fr);
+    gap: 1rem;
+    margin: 2rem;
+}
+
+/*                                      ABOUT US                                                            */
+.about_us h2 {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
