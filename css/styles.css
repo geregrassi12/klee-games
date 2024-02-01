@@ -55,6 +55,9 @@ main {
 }
 
 /*                                      HEADER                                                            */
+.navbar {
+    background-color: #214e6c; /* Cambia el color a tu preferencia */
+}
 .navbar-nav a {
     margin: .7rem;
     font-size: 1.6rem;
@@ -67,6 +70,9 @@ main {
     margin-left: 5rem;
 }
 
+.navbar-img{
+    margin-left: 1rem;
+}
 
 .navbar-nav a {
     margin: 0 15px; /* Ajusta el espacio entre enlaces según tus necesidades */
@@ -74,7 +80,7 @@ main {
     text-decoration: none;
     font-size: 1.35rem;
     text-transform: uppercase;
-    font-family: montserrat, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     overflow: hidden;
 }
 
@@ -98,6 +104,8 @@ main {
 
 .no-hover-effect::before {
     display: none;
+    transition: none;
+    transform: none;
 }
 
 .nav-link img {

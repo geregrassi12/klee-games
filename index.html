@@ -13,25 +13,33 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="navbar-img">
+                <a class="nav-link no-hover-effect" href="#">
+                    <img src="./img/logo_klee.png" alt="Logo Klee">
+                </a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-img ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link no-hover-effect" href="#">
-                            <img src="./img/logo_klee.png" alt="Logo Klee">
-                        </a>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><b>HOME</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><b>GAMES</b></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            GAMES
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Town Life</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Apartment</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Space</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Prehistoric</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Summer</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">PlayCity - Dinosaur</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">Tommy's House</a></li>
+                            <li><a class="dropdown-item no-hover-effect" href="#">Tommy's Farm</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><b>ABOUT US</b></a>
