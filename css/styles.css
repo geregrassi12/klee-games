@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 
 :root {
@@ -51,16 +54,14 @@ a {
 }
 
 main {
-    background: linear-gradient(to top, white, 5%, rgba(52, 172, 68, 0.877));
+    background: linear-gradient(to top, white, 15%, rgba(52, 172, 68, 0.877));
 }
 
 /*                                      HEADER                                                            */
-.navbar {
-    background-color: #214e6c; /* Cambia el color a tu preferencia */
-}
 .navbar-nav a {
     margin: .7rem;
     font-size: 1.6rem;
+    font-weight: 800;
     color: var(--clr-black);
 }
 
@@ -211,6 +212,7 @@ main {
     text-align: center;
     left: 50%;
     font-size: 7rem;
+    margin-bottom: 2.5rem;
 }
 
 .games-list {
@@ -242,17 +244,67 @@ main {
 .featured-games-details {
     display: grid;
     gap: 1rem;
-    margin: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
-.name-featured-game .store-featured-game {
+.name-featured-game{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.description-featured-game{
+    font-size: 1.3rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.btn{
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.btn a{
+    text-decoration: none;
+}
+
+.store-featured-game {
     display: flex;
     align-items: center;
+
 }
 
 /*                                      ABOUT US                                                            */
 
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+    .about-us-two {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 18rem; 
+}
+
+.about-us-two h2 {
+    font-family: 'Bungee Spice', sans-serif;
+    text-align: center;
+    left: 50%;
+    font-size: 7rem;
+}
+
+.about-us-two p {
+    font-size: 30px;
+    font-weight: 300;
+}
 
 
 
