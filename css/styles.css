@@ -180,7 +180,7 @@ main {
     border: 5px white solid;
     border-radius: 1rem;
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     /* Tamaño del texto */
     margin-top: 1rem;
     /* Ajusta el margen superior según tus necesidades */
@@ -234,7 +234,6 @@ main {
 
 .featured-games {
     display: flex;
-    background-color: var(--clr-main-light);
 }
 
 .image-featured-game {
@@ -242,12 +241,13 @@ main {
 }
 
 .featured-games-details {
+        background-color: var(--clr-main-light);
     display: grid;
     gap: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .name-featured-game{
