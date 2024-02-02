@@ -445,6 +445,7 @@ header{
     }
     .hero{
         background-image: url('../img/klee-portada-pequeña.png');
+        z-index: 1;
         background-position: center;
         background-size: cover;
 
