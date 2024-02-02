@@ -403,7 +403,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.png');
+        background-image: url('../img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -560,7 +560,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.png');
+        background-image: url('../img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -691,7 +691,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.png');
+        background-image: url('../img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -816,7 +816,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.png');
+        background-image: url('../img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
