@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
-
 :root {
     --clr-main: rgba(133, 236, 147, 0.678);
     --clr-main-light: rgb(163, 230, 172);
@@ -218,14 +217,10 @@ header{
 }
 
 /*                                      GAMES                                                            */
-
-.hero-two h2 {
-    font-family: 'Bungee Spice', sans-serif;
-}
-
 .hero-two-name h2 {
+    font-family: 'Bungee Spice', sans-serif;
     text-align: center;
-    left: 50%;
+    justify-content: center;
     font-size: 7rem;
     margin-bottom: 2.5rem;
 }
@@ -288,7 +283,7 @@ header{
     text-decoration: none;
 }
 
-.store-featured-game {
+.store-game {
     display: flex;
     align-items: center;
 
@@ -317,6 +312,7 @@ header{
     left: 50%;
     font-size: 7rem;
     padding-top: 5rem;
+    color: linear-gradiant;
 }
 
 .about-us-parrafe{
@@ -391,6 +387,46 @@ header{
     display: block;
     margin-right: 2rem;
 }
+/*                                      PAGINAS JUEGOS                                                            */
+.hero-games{
+    background-color: var(--clr-white);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.game-section-solitaire{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.game-section-solitaire-img img{
+    width: 600px;
+    height: auto;
+}
+.game-section-solitaire-details h1{
+    font-size: 2.7rem;
+    font-weight: 600;
+}
+.game-section-solitaire-details h2{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.game-section-solitaire-details p{
+    width: 30rem;
+}
+.store-game-games{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -399,6 +435,11 @@ header{
 
 /* Media query para pantallas pequeñas (mobile) TALLE L */
 @media (max-width: 430px){
+    .header{
+        position: fixed;
+        z-index: 1000; 
+        width: 100%;
+    }
     main{
         width: 100%;
     }
@@ -406,7 +447,7 @@ header{
         background-image: url('../img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
-        z-index: 1000;
+
     }
     .hero-two-name h2 {
         text-align: center;
@@ -471,11 +512,11 @@ header{
         text-transform: uppercase;
         font-size: 1.5rem;
     }
-    .store-featured-game{
+    .store-game{
         width: 5rem;
         height: auto;
     }
-    .store-featured-game img{
+    .store-game img{
         width: 10rem;
         height: auto;
     }
@@ -496,7 +537,7 @@ header{
         text-decoration: none;
     }
     
-    .store-featured-game {
+    .store-game {
         display: flex;
         align-items: center;
     
@@ -642,7 +683,7 @@ header{
         text-decoration: none;
     }
     
-    .store-featured-game img{
+    .store-game img{
         display: flex;
         align-items: center;
 
@@ -773,7 +814,7 @@ header{
         text-decoration: none;
     }
     
-    .store-featured-game img{
+    .store-game img{
         display: flex;
         align-items: center;
 
@@ -898,7 +939,7 @@ header{
         text-decoration: none;
     }
     
-    .store-featured-game img{
+    .store-game img{
         display: flex;
         align-items: center;
 
@@ -966,7 +1007,7 @@ header{
     .hero{
         width: 100%;
         height: 500;
-        background-image: url('/img/klee-portada-grande.png');
+        background-image: url('../img/klee-portada-grande.png');
         background-size: cover;
     }
     .carousel{
