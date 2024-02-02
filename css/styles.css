@@ -398,12 +398,12 @@ header{
 /*                                      MEDIA QUERY                                                            */
 
 /* Media query para pantallas pequeñas (mobile) TALLE L */
-@media (max-width: 425px){
+@media (max-width: 430px){
     main{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.jpg');
+        background-image: url('/img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -444,7 +444,6 @@ header{
     }
     .featured-games{
         display: grid;
-
         width: 100%;
     }
     .featured-games-details{
@@ -456,12 +455,29 @@ header{
         padding-right: 1rem;
     }
     .name-featured-game{
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    
+    .description-featured-game{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .name-featured-game{
         font-family: 'Noto Sans', sans-serif;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 1.5rem;
     }
-    
+    .store-featured-game{
+        width: 5rem;
+        height: auto;
+    }
+    .store-featured-game img{
+        width: 10rem;
+        height: auto;
+    }
     .description-featured-game{
         font-size:1rem;
         font-family: 'Noto Sans', sans-serif;
@@ -489,14 +505,28 @@ header{
         width: 75%;
         height: auto;
     }
+    .about-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+        .about-us-two {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 18rem; 
+    }
     .about-us-parrafe p{
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: .6rem;
+        padding-right: .6rem;
         font-size: 15px;
         font-weight: 400;
     }
     .about-us-parrafe img{
-        height: 10rem;
+        height: 5rem;
         width: auto;
     }
     .contact h2{
@@ -524,6 +554,135 @@ header{
         padding-right: 10px;
     }
 }
+/* Media query para pantallas pequeñas (mobile) TALLE IPHONE 12 PRO */
+@media (max-width: 390px){
+    main{
+        width: 100%;
+    }
+    .hero{
+        background-image: url('/img/klee-portada-pequeña.png');
+        background-position: center;
+        background-size: cover;
+    }
+    .hero-two{
+        width: 100%;
+        height: auto;
+    }
+    .hero-two-name h2 {
+        text-align: center;
+        left: 50%;
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+    .about-us-two h2{
+        font-size: 4rem;
+        padding-top: 1rem;
+    }
+    .carousel{
+        display: none;
+    }
+    .eslogan{
+        color: var(--clr-black);
+        border-color: var(--clr-main-light);
+        font-size: .9rem;
+        width: 70%;
+        top: 45%;
+        left: 50%;
+    }
+    .carousel-item-links{
+        top: 60%;
+        left: 50%;
+    }
+    .carousel-item-links img{
+        width: 9rem;
+        height: auto;
+    }
+
+    .games-list {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+    .featured-games{
+        display: grid;
+
+        width: 100%;
+    }
+    .featured-games-details{
+        width: 100%;
+        height: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .name-featured-game{
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    
+    .description-featured-game{
+        width: 15rem;
+        font-size:1rem;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .image-featured-game img{
+        width: 100%;
+    }
+    
+    .btn{
+        width: 10rem;
+        height: 2.5rem;
+    }
+    
+    .btn a{
+        text-decoration: none;
+    }
+    
+    .store-featured-game img{
+        display: flex;
+        align-items: center;
+
+        width: 8rem;
+        height: auto;
+    }
+    
+    .image-featured-game{
+        width: 75%;
+        height: auto;
+    }
+    .about-us-parrafe p{
+        padding-left: .5rem;
+        padding-right: .5rem;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .about-us-parrafe img{
+        height: 6rem;
+        width: auto;
+    }
+    .contact h2{
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+    .container-footer{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 100%;
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-footer-redes a{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 
 /* Media query para pantallas pequeñas (mobile) TALLE M */
@@ -532,7 +691,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.jpg');
+        background-image: url('/img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -657,7 +816,7 @@ header{
         width: 100%;
     }
     .hero{
-        background-image: url('/img/klee-portada-pequeña.jpg');
+        background-image: url('/img/klee-portada-pequeña.png');
         background-position: center;
         background-size: cover;
     }
@@ -802,11 +961,11 @@ header{
 
 
 /* Media query para pantallas medianas (tablets) */
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 1024px){
     .hero{
-        width: 768px;
+        width: 100%;
         height: 500;
-        background-image: url('/img/klee-portada-mediana.jpg');
+        background-image: url('/img/klee-portada-grande.png');
         background-size: cover;
     }
     .carousel{
