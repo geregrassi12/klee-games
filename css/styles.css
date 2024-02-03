@@ -135,8 +135,10 @@ header{
 /*                                      HERO                                                            */
 .hero {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 0px);
     position: relative;
+    background-image: url('../img/banner_klee_01c.jpg');
+    background-size: cover;
 }
 
 /* Estilo para el fondo circular del botón de siguiente */
@@ -402,7 +404,7 @@ header{
     gap: 2rem;
 }
 .game-section-solitaire-img img{
-    width: 600px;
+    width: 700px;
     height: auto;
 }
 .game-section-solitaire-details h1{
@@ -410,11 +412,11 @@ header{
     font-weight: 600;
 }
 .game-section-solitaire-details h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 .game-section-solitaire-details p{
-    width: 30rem;
+    width: 35rem;
 }
 .store-game-games{
     display: flex;
@@ -550,6 +552,20 @@ header{
         text-transform: uppercase;
         font-size: 1.2rem;
     }
+    .contact h2{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact p{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-left: .9rem;
+        padding-right: .9rem;
+        font-size: .9rem;
+        text-align: center;
+    }
     .container-footer{
         padding-top: 10px;
         padding-bottom: 10px;
@@ -592,7 +608,7 @@ header{
         font-weight: 600;
     }
     .game-section-solitaire-details h2{
-        font-size: 1rem;
+        font-size: 1.6rem;
         font-weight: 300;
     }
     .game-section-solitaire-details p{
