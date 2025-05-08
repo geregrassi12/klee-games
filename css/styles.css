@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
 :root {
     --clr-main: rgba(133, 236, 147, 0.678);
     --clr-main-light: rgb(163, 230, 172);
@@ -36,7 +38,6 @@ textarea,
 ul {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 ul {
@@ -63,164 +64,119 @@ main {
 }
 
 /*                                      HEADER                                                            */
-.header{
-    position: fixed;
-    z-index: 1000; 
-    width: 100%;
-}
-header{
-    background-color: var(--clr-transparent-gray);
-
-}
-.navbar-nav a {
-    margin: .7rem;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--clr-black);
-}
-
-.navbar-nav{
+.header {
+    background-color: white;
+    height: 60px;
+    padding: 0 40px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  /* === Logo === */
+  .navbar-img img {
+    height: 32px;
+  }
+  
+  /* === Menú a la derecha === */
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
-    margin-left: 5rem;
-}
-
-.navbar-img{
-    margin-left: 1rem;
-}
-
-.navbar-nav a {
-    margin: 0 15px; /* Ajusta el espacio entre enlaces según tus necesidades */
+  }
+  
+  /* === Enlaces del menú principal === */
+  .navbar-nav .nav-link {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: black !important;
+    margin-left: 24px;
     position: relative;
     text-decoration: none;
-    font-size: 1.35rem;
-    text-transform: uppercase;
-    font-family: 'Noto Sans', sans-serif;
-    overflow: hidden;
-}
-
-.navbar-nav a::before {
+  }
+  
+  /* === Subrayado al hacer hover (línea inferior animada) === */
+  .navbar-nav .nav-link::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
-    background-color: #000;
+    height: 3px;
+    background-color: black;
     bottom: 0;
     left: 0;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
-}
-
-.navbar-nav a:hover::before {
+  }
+  
+  .navbar-nav .nav-link:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.no-hover-effect::before {
-    display: none;
-    transition: none;
-    transform: none;
-}
-
-.nav-link img {
-    width: 185px;
-    /* Ajusta el ancho de la imagen según tus necesidades */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-    display: block;
-}
-
+  }
+  
+  /* === Dropdown === */
+  .dropdown-menu {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+  
+  /* === Items del dropdown === */
+  .dropdown-item {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: black;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  /* === Misma línea animada en items del dropdown === */
+  .dropdown-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: 4px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 /*                                      HERO                                                            */
 .hero {
-    width: 100%;
-    height: calc(100vh - 0px);
-    position: relative;
     background-image: url('../img/banner_klee_01c.jpg');
     background-size: cover;
+    height: calc(130vh - 0px); /* esto lo podés ajustar */
+
+    
 }
 
-/* Estilo para el fondo circular del botón de siguiente */
-.carousel-control-next::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    /* Ajusta el tamaño del círculo según tus necesidades */
-    height: 60px;
-    /* Ajusta el tamaño del círculo según tus necesidades */
-    background-color: rgba(169, 169, 169, 0.5);
-    /* Gris con opacidad al 50% */
-    border-radius: 50%;
-    /* Hace que el fondo tenga forma de círculo */
-}
 
-/* Muestra el fondo cuando se coloca el ratón sobre el botón de siguiente */
-.carousel-control-next:hover::after {
-    display: block;
-}
 
-/* Estilo para el fondo circular del botón de siguiente */
-.carousel-control-prev::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    /* Ajusta el tamaño del círculo según tus necesidades */
-    height: 60px;
-    /* Ajusta el tamaño del círculo según tus necesidades */
-    background-color: rgba(169, 169, 169, 0.5);
-    /* Gris con opacidad al 50% */
-    border-radius: 50%;
-    /* Hace que el fondo tenga forma de círculo */
-}
 
-/* Muestra el fondo cuando se coloca el ratón sobre el botón de siguiente */
-.carousel-control-prev:hover::after {
-    display: block;
-}
-
-.eslogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(133, 236, 147, 0.678);
-    color: white;
-    /* Color del texto */
-    border: 5px white solid;
-    border-radius: 1rem;
-    padding: 1rem;
-    font-size: 2.5rem;
-    /* Tamaño del texto */
-    margin-top: 1rem;
-    /* Ajusta el margen superior según tus necesidades */
-}
-
-.carousel-item-links {
-    position: absolute;
-    top: 75%;
-    /* Ajusta la posición vertical de los enlaces según tus necesidades */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    /* Ajusta el espacio entre los enlaces según tus necesidades */
-    justify-content: center;
-    /* Alinea los enlaces al centro */
-    margin-top: 10px;
-    /* Ajusta el margen superior según tus necesidades */
-    z-index: 10;
-}
 
 /*                                      GAMES                                                            */
+.hero-two{
+    background-color: #77ffad;
+}
+
 .hero-two-name h2 {
-    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Fredoka', sans-serif;
+    color: black;
     text-align: center;
     justify-content: center;
     font-size: 7rem;
@@ -228,9 +184,7 @@ header{
 }
 
 .games-list {
-    margin-left: 8rem;
-    margin-right: 8rem;
-    margin-bottom: 8rem;
+
 }
 
 .game-section {
@@ -238,97 +192,221 @@ header{
     --kl-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--kl-gutter-y));
-    margin-right: calc(-.5 * var(--kl-gutter-x));
-    margin-left: calc(-.5 * var(--kl-gutter-x));
     gap: 1.5rem;
 }
 
 .featured-games {
     display: flex;
-}
+    background-color: #9CD9A0;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto; /* Aumenta el espacio entre bloques */
+    height: 290px; /* 20% más que antes */
+    align-items: stretch;
+  }
 
+  .featured-games-img {
+    flex: 0 0 40%;
+    height: 100%;
+  }
+  
+  .featured-games-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+  }
+
+  .featured-games-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    height: 100%;
+  }
 .image-featured-game {
     width: 752px;
     aspect-ratio: auto 752 / 450;
     height: 450px;
 }
-.featured-games-details {
-        background-color: var(--clr-main-light);
-    display: grid;
-    gap: 1rem;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
 
 
-.name-featured-game{
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-}
 
-.description-featured-game{
-    font-size: 1.3rem;
-    font-family: 'Noto Sans', sans-serif;
-}
+.name-featured-game {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 2rem; /* Más grande */
+  }
+  .description-featured-game {
+    font-size: 1.2rem;
+    font-family: 'Fredoka', sans-serif;
+    margin-bottom: auto;
+  }
 .description-featured-game-space{
     font-size: 1rem;
 }
-.btn{
-    width: 10rem;
-    height: 2.5rem;
-}
+.btn {
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background-color: var(--clr-main-dark);
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 8px;
+  }
 
-.btn a{
-    text-decoration: none;
-}
-
-.store-game {
+  .btn {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background-color: var(--clr-main-dark);
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 1rem;
+  }
 
-}
 
+
+
+  .store-game img {
+    width: 140px;
+    height: 48px; /* Fuerza altura uniforme */
+    object-fit: contain;
+  }
+
+  .store-game img {
+    width: 140px;
+    height: auto;
+  }
+
+.more-games {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .more-games-btn{
+    padding-bottom: 12px;
+
+}  
+
+  /* Muestra con animación */
+  .more-games.visible {
+    display: flex;
+    opacity: 1;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  /* Botón "MORE GAMES" */
+  .more-games-btn {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .more-games-btn button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: var(--clr-main-dark); /* color verde oscuro */
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .more-games-btn button:hover {
+    background-color: var(--clr-main); /* tono más claro al pasar el mouse */
+  }
 /*                                      ABOUT US                                                            */
 
 .about-us {
+    width: 100%;
+    background: url(../img/kleebg.png);
+    padding: 100px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
+  
+  .about-us-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .klee-title-box {
+    font-family: 'Fredoka', sans-serif;
+    background-color: rgba(18, 12, 108, 0.6);
+    color: white;
+    padding: 15px 60px;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    box-sizing: border-box;
+    max-width: 87%;     /* o un valor como 800px */
+    margin-left: auto;  /* lo empuja hacia la derecha */
+    text-align: left;  /* opcional: alinea el texto a la derecha */
+  }
+  
 
-    .about-us-two {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 18rem; 
-}
-
-.about-us-two h2 {
-    font-family: 'Bungee Spice', sans-serif;
+  .about-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 4rem;
     text-align: center;
-    left: 50%;
-    font-size: 7rem;
-    padding-top: 5rem;
-    color: linear-gradient;
-}
-
-.about-us-parrafe{
+    color: white;
+    background-color: #0f4a8a; /* azul similar al de Manguita */
+    padding: 20px 40px;
+    border-radius: 16px;
+    display: inline-block;
+  }
+  
+  .about-content {
     display: flex;
-    justify-content: space-between;
-}
-.about-us-parrafe p{
-    padding-left: 5rem;
-    padding-right: 5rem;
-    font-size: 30px;
-    font-weight: 300;
-}
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    gap: 60px;
+  }
+  
+  .about-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 30px;
+    border-radius: 40px;
+    max-width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .carousel-item-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .carousel-item-links img {
+    width: 200px;
+    height: auto;
+  }
+
+  .about-img img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
 
 
 /*                                      FOOTER                                                            */
