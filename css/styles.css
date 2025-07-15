@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
+    
+
 :root {
     --clr-main: rgba(133, 236, 147, 0.678);
     --clr-main-light: rgb(163, 230, 172);
@@ -502,6 +504,7 @@ main {
 
 
 
+/* I DONT KNOW */
 
 
 
@@ -517,9 +520,19 @@ main {
         width: 100%;
     }
     .hero{
-        background-image: url('../img/klee-portada-pequeña.png');
-        background-position: center;
-        background-size: cover;
+        background-image: url('../img/klee-portada-pequeña.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    width: 100vw !important;
+    aspect-ratio: 425/529 !important;
+    height: auto !important;
+    min-height: 300px !important; /* Nunca menos que esto */
+    max-height: 80vh !important;  /* Evita que sea gigante */
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
     }
     .hero-two{
         width: 100%;
@@ -560,7 +573,79 @@ main {
         margin-right: 2rem;
         margin-bottom: 2rem;
     }
-    .featured-games{
+
+    .featured-games {
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: 98vw !important;
+  margin: 12px auto !important;
+  box-shadow: 0 2px 12px 0 #0002 !important;
+  overflow: visible !important;
+  border-radius: 18px !important;
+}
+
+.featured-games-details {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 16px 10px 16px 10px !important;
+  gap: 8px !important;
+  font-size: 1rem !important;
+}
+
+.name-featured-game {
+  font-size: 1.1rem !important;
+  margin-bottom: 4px !important;
+}
+.description-featured-game {
+  font-size: 0.97rem !important;
+  margin-bottom: 10px !important;
+  /* Si alguna descripción larga igual se corta, agregá esto: */
+  overflow: visible !important;
+  display: block !important;
+  white-space: normal !important;
+  text-overflow: unset !important;
+  max-height: none !important;
+}
+.store-game {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 6px !important;
+  margin-bottom: 4px !important;
+  overflow: visible !important;
+}
+
+.store-game img {
+  width: 46% !important;    /* Cada botón ocupa el 46% del ancho para que entren dos con espacio */
+  min-width: 100px !important;
+  max-width: 140px !important;
+  height: 38px !important;
+  margin: 0 !important;
+  border: none !important;
+  background: none !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+.btn {
+  margin-top: 8px !important;
+  margin-bottom: 2px !important;
+  align-self: flex-start !important;
+  width: fit-content !important;
+  min-width: 110px;
+  font-size: 1rem !important;
+  padding: 8px 18px !important;
+}
+
+    /* .featured-games{
         display: grid;
 
         width: 100%;
@@ -609,8 +694,45 @@ main {
     .image-featured-game{
         width: 75%;
         height: auto;
-    }
-    .about-us-parrafe p{
+    } */
+
+    .klee-title-box {
+    padding: 0 12px !important;
+    text-align: center !important;
+}
+
+.klee-title-box h2 {
+    font-size: 2.5rem !important;
+    text-align: center !important;
+    margin: 0 0 12px 0 !important;
+    word-break: break-word !important;
+    line-height: 1.1 !important;
+}
+
+.about-content {
+    flex-direction: column !important;
+    gap: 18px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 8px !important;
+    width: 100% !important;
+}
+
+.about-text {
+    font-size: 1rem !important;
+    padding: 16px 10px !important;
+    max-width: 98vw !important;
+    border-radius: 18px !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+.about-img img{
+    
+}
+
+    /* .about-us-parrafe p{
         padding-left: .5rem;
         padding-right: .5rem;
         font-size: 10px;
@@ -619,14 +741,17 @@ main {
     .about-us-parrafe img{
         height: 6rem;
         width: auto;
-    }
+    } */
+
+    .about-img img {
+    display: none !important;
+  }
+
     .contact h2{
         font-family: 'Noto Sans', sans-serif;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 1.2rem;
-    }
-    .contact h2{
         display: grid;
         justify-content: center;
         align-items: center;
@@ -640,6 +765,14 @@ main {
         font-size: .9rem;
         text-align: center;
     }
+
+    .contact button, .contact .btn {
+    display: block;
+    margin: 18px auto 0 auto !important;
+    float: none !important;
+    text-align: center !important;
+  }
+
     .container-footer{
         padding-top: 10px;
         padding-bottom: 10px;
